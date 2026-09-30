@@ -4,12 +4,13 @@
     box-sizing: border-box;
 }
 
+/* Den nye milde, sandfarvede gradient i baggrunden */
 html, body {
-    height: 100%;
+    min-height: 100vh;
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    background-color: #ffffff; 
+    background: linear-gradient(180deg, #fbf9f4 0%, #e8dec9 100%) fixed; 
     color: #333333;
     overflow-x: hidden;
 }
@@ -20,12 +21,13 @@ html, body {
     padding: 0 20px;
 }
 
+/* Snorlige, kridhvid bjælke i toppen */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #ffffff !important; /* Tvinger hvid baggrund frem */
+    background-color: #ffffff; 
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); 
     z-index: 9999;
 }
@@ -36,19 +38,19 @@ html, body {
     align-items: center;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 10px 15px; /* Mindre padding i siderne frigiver plads til logoet */
+    padding: 15px 20px;
 }
 
 .logo-link {
     display: flex;
     align-items: center;
     text-decoration: none;
-    max-width: 70%; /* Giver logoet lov til at fylde op til 70% af skærmens bredde */
+    max-width: 70%;
     flex-grow: 1;
 }
 
 .nav-logo-img {
-    height: 42px; /* Gør logoet markant større og mere synligt */
+    height: 42px;
     width: auto;
     object-fit: contain;
     display: block;
@@ -88,13 +90,14 @@ html, body {
     background-color: #544e48;
 }
 
+/* Sektionerne sat til transparent, så den bløde gradient kigger igennem */
 .hero-section, .page-section {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 140px 20px 60px 20px;
-    background-color: #ffffff;
+    background-color: transparent; 
 }
 
 .linktree-card {
@@ -104,7 +107,7 @@ html, body {
     padding: 50px 40px;
     border-radius: 40px; 
     text-align: center;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12); /* Lidt dybere skygge på sandfarven */
     position: relative;
     z-index: 1;
     animation: scaleIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -277,9 +280,6 @@ html, body {
     transition: all 0.3s ease;
 }
 
-/* ==========================================================================
-   MOBIL OPTIMERING & BURGERMENU (Fejlsikret)
-   ========================================================================== */
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: flex; 
@@ -293,7 +293,7 @@ html, body {
         left: 0;
         width: 100%;
         background-color: #ffffff;
-        box-shadow: 0 15px 30px rgba(0,0,0,0.08); /* Lidt dybere skygge */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         max-height: 0; 
         padding: 0; 
         overflow: hidden;
@@ -303,7 +303,7 @@ html, body {
     }
 
     .nav-links.active {
-        max-height: 360px; /* Øget en smule så der er perfekt plads til "Forside" */
+        max-height: 360px;
         padding: 30px 0; 
         visibility: visible; 
     }
