@@ -43,12 +43,14 @@ html, body {
     display: flex;
     align-items: center;
     text-decoration: none;
+    min-width: 0;
 }
 
 .nav-logo-img {
-    height: 35px;
+    height: 30px;
     width: auto;
     object-fit: contain;
+    display: block;
 }
 
 .nav-links {
