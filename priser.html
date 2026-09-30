@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priser | Hovedsagelig</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo-link">
+                <img src="logo-hvid.png" alt="Hovedsagelig" class="nav-logo-img">
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Forside</a></li>
+                <li><a href="om-os">Om os</a></li>
+                <li><a href="galleri">Galleri</a></li>
+                <li><a href="priser">Priser</a></li>
+                <li><a href="faq">FAQ</a></li>
+                <li><a href="kontakt" class="nav-btn">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page-section">
+        <div class="linktree-card">
+            <h2 class="page-title">Behandlingspriser</h2>
+            <p class="hero-desc" style="margin-bottom: 25px;">Alle forløb skræddersyes efter dine specifikke behov. Kontakt os for en præcis vurdering.</p>
+            
+            <!-- Pris-liste opbygget som dine Linktree-ovaler -->
+            <div class="price-item">
+                <span class="price-name">SMP Behandling - Hårtab</span>
+                <span class="price-value">Fra [X.XXX] kr.</span>
+            </div>
+            
+            <div class="price-item">
+                <span class="price-name">Density Work / Fortætning</span>
+                <span class="price-value">Fra [X.XXX] kr.</span>
+            </div>
+            
+            <div class="price-item">
+                <span class="price-name">Afdækning af ar / Alopecia</span>
+                <span class="price-value">Fra [X.XXX] kr.</span>
+            </div>
+
+            <div class="price-item">
+                <span class="price-name">Uforpligtende Konsultation</span>
+                <span class="price-value" style="color: #bba06b;">Gratis</span>
+            </div>
+
+            <a href="kontakt" class="cta-button" style="margin-top: 35px;">Book en tid nu</a>
+        </div>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+            document.querySelector('.mobile-menu-btn').classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
