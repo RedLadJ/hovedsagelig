@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hovedsagelig</title>
-    <link rel="stylesheet" href="style.css?v=1">
-    
+    <title>Hovedsagelig | SMP & Density Work</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo-link">
                 <img src="logo-hvid.png" alt="Hovedsagelig" class="nav-logo-img">
             </a>
-            <ul class="nav-links">
+            
+            <!-- Ny mobil-knap (Burgermenu) -->
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
                 <li><a href="om-os.html">Om os</a></li>
                 <li><a href="galleri.html">Galleri</a></li>
                 <li><a href="faq.html">FAQ</a></li>
@@ -41,5 +47,14 @@
         </div>
     </header>
 
+    <!-- Lille script der tænder og slukker for mobilmenuen -->
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+            document.querySelector('.mobile-menu-btn').classList.toggle('active');
+        }
+    </script>
+
 </body>
 </html>
+
