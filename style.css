@@ -6,7 +6,7 @@
 
 html, body {
     height: 100%;
-    font-family: "Red Hat Display", sans-serif !important;
+    font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     background-color: #ffffff; 
@@ -25,8 +25,8 @@ html, body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    background-color: #ffffff; /* Fast og tydelig hvid farve */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); /* Tydelig skygge, så den adskiller sig fra baggrunden */
     z-index: 9999;
 }
 
@@ -36,7 +36,7 @@ html, body {
     align-items: center;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 10px 20px;
+    padding: 15px 20px;
 }
 
 .logo-link {
@@ -230,7 +230,7 @@ html, body {
     border-radius: 50px; 
     background-color: #544e48;
     color: #ffffff;
-    font-family: "Cormorant Garamond", serif;
+    font-family: inherit;
     font-size: 1rem;
     transition: all 0.3s ease;
 }
@@ -252,11 +252,7 @@ html, body {
     from { opacity: 0; transform: scale(0.96); }
     to { opacity: 1; transform: scale(1); }
 }
-/* ==========================================================================
-   MOBIL OPTIMERING & BURGERMENU (Eksklusivt mobil-look)
-   ========================================================================== */
 
-/* Vi skjuler mobilknappen som standard på computere */
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -273,18 +269,19 @@ html, body {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: #332f2b; /* Matcher din mørkebrune Linktree-farve */
+    background-color: #332f2b;
     border-radius: 2px;
     transition: all 0.3s ease;
 }
 
-/* Her styler vi, hvordan menuen forvandler sig på mobiltelefoner */
+/* ==========================================================================
+   MOBIL OPTIMERING & BURGERMENU (OPDATERET OG RETTET)
+   ========================================================================== */
 @media (max-width: 768px) {
     .mobile-menu-btn {
-        display: flex; /* Viser de 3 streger på mobilen */
+        display: flex; 
     }
 
-    /* Omdanner menulinjen til en elegant dropdown-skærm */
     .nav-links {
         display: flex;
         flex-direction: column;
@@ -294,17 +291,16 @@ html, body {
         width: 100%;
         background-color: #ffffff;
         box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        padding: 20px 0;
-        border-top: 1px solid rgba(187, 160, 107, 0.1);
-        max-height: 0; /* Skjult som standard */
+        max-height: 0; 
+        padding: 0; /* Rettelse: Tvinger højden til 0 som standard */
         overflow: hidden;
         transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        z-index: 9998;
     }
 
-    /* Når menuen aktiveres (klikkes på), ruller den blødt ned */
     .nav-links.active {
         max-height: 300px;
-        padding: 30px 0;
+        padding: 30px 0; /* Folder sig først ud ved klik */
     }
 
     .nav-links li {
@@ -313,7 +309,7 @@ html, body {
         width: 100%;
     }
 
-    .nav-links li margin-left {
+    .nav-links li:first-child {
         margin-left: 0;
     }
 
@@ -323,7 +319,6 @@ html, body {
         padding: 12px 40px;
     }
 
-    /* Animation: De 3 streger forvandler sig til et elegant 'X', når menuen er åben */
     .mobile-menu-btn.active span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
