@@ -338,3 +338,24 @@ html, body {
         padding: 40px 25px;
     }
 }
+/* Priselementer i ovalerne */
+.price-item {
+    background-color: #544e48;
+    border-radius: 50px;
+    padding: 16px 30px;
+    margin-top: 15px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between; /* Skubber navn til venstre og pris til højre */
+    align-items: center;
+    font-weight: 500;
+}
+
+.price-name {
+    text-align: left;
+}
+
+.price-value {
+    font-weight: 700;
+    white-space: nowrap;
+}
