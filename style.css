@@ -25,8 +25,8 @@ html, body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #ffffff; /* Fast og tydelig hvid farve */
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); /* Tydelig skygge, så den adskiller sig fra baggrunden */
+    background-color: #ffffff !important; /* Tvinger hvid baggrund frem */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); 
     z-index: 9999;
 }
 
@@ -275,7 +275,7 @@ html, body {
 }
 
 /* ==========================================================================
-   MOBIL OPTIMERING & BURGERMENU (OPDATERET OG RETTET)
+   MOBIL OPTIMERING & BURGERMENU (Fejlsikret)
    ========================================================================== */
 @media (max-width: 768px) {
     .mobile-menu-btn {
@@ -292,15 +292,17 @@ html, body {
         background-color: #ffffff;
         box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         max-height: 0; 
-        padding: 0; /* Rettelse: Tvinger højden til 0 som standard */
+        padding: 0; 
         overflow: hidden;
-        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        visibility: hidden; /* Gør menuen helt usynlig og umulig at klikke på i lukket tilstand */
+        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out, visibility 0.3s;
         z-index: 9998;
     }
 
     .nav-links.active {
         max-height: 300px;
-        padding: 30px 0; /* Folder sig først ud ved klik */
+        padding: 30px 0; 
+        visibility: visible; /* Gør menuen aktiv og klikbar, når burgermenuen åbnes */
     }
 
     .nav-links li {
