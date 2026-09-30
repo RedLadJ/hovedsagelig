@@ -3,42 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hovedsagelig</title>
+    <title>Kontakt | Hovedsagelig</title>
     <link rel="stylesheet" href="style.css">
-    
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link class="font-link" rel="preconnect" href="https://googleapis.com">
+    <link class="font-link" rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-
+    <!-- Navigation med mobilknap -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo-link">
                 <img src="logo-hvid.png" alt="Hovedsagelig" class="nav-logo-img">
             </a>
-            <ul class="nav-links">
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="om-os.html">Om os</a></li>
                 <li><a href="galleri.html">Galleri</a></li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="kontakt.html" class="nav-btn">Kontakt</a></li>
+                <li><a href="kontakt.html" class="nav-btn">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Kontakt indhold -->
     <main class="page-section">
         <div class="linktree-card">
             <h2 class="page-title">Kontakt os</h2>
             <p class="hero-desc" style="margin-bottom: 30px;">Book en gratis konsultation eller stil et spørgsmål.</p>
-            
-            <!-- Direkte info i Linktree-ovaler -->
             <div class="contrast-oval" style="cursor: default;">📞 Telefon: +45 [Dit Nummer]</div>
             <div class="contrast-oval" style="cursor: default;">✉️ Mail: kontakt@hovedsagelig.dk</div>
             <div class="contrast-oval" style="cursor: default;">📍 Adresse: [Din Klinikadresse]</div>
-            
-            <!-- Formular -->
             <form action="https://formspree.io" method="POST" class="contact-form" style="margin-top: 30px;">
                 <input type="text" name="name" placeholder="Dit navn" required>
                 <input type="email" name="_replyto" placeholder="Din e-mailadresse" required>
@@ -47,6 +46,14 @@
             </form>
         </div>
     </main>
+
+    <!-- Kontakten der tænder for menuen -->
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+            document.querySelector('.mobile-menu-btn').classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
