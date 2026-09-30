@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hovedsagelig</title>
+    <title>FAQ | Hovedsagelig</title>
     <link rel="stylesheet" href="style.css">
-    
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Navigation med mobilknap -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo-link">
                 <img src="logo-hvid.png" alt="Hovedsagelig" class="nav-logo-img">
             </a>
-            <ul class="nav-links">
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="om-os.html">Om os</a></li>
                 <li><a href="galleri.html">Galleri</a></li>
                 <li><a href="faq.html">FAQ</a></li>
@@ -26,11 +31,13 @@
         </div>
     </nav>
 
+    <!-- FAQ Sektion -->
     <main class="page-section">
         <div class="linktree-card">
             <h2 class="page-title">Ofte stillede spørgsmål</h2>
             <p class="hero-desc" style="margin-bottom: 30px;">Klik på spørgsmålene for at se svarene.</p>
             
+            <!-- Spørgsmål 1 -->
             <div class="contrast-oval" onclick="this.classList.toggle('active')">
                 Hvad er SMP behandling?
             </div>
@@ -40,6 +47,7 @@
                 </div>
             </div>
 
+            <!-- Spørgsmål 2 -->
             <div class="contrast-oval" onclick="this.classList.toggle('active')">
                 Gør det ondt?
             </div>
@@ -49,6 +57,7 @@
                 </div>
             </div>
             
+            <!-- Spørgsmål 3 -->
             <div class="contrast-oval" onclick="this.classList.toggle('active')">
                 Hvor mange behandlinger skal der til?
             </div>
@@ -60,6 +69,14 @@
 
         </div>
     </main>
+
+    <!-- Kontakten der tænder for mobilmenuen -->
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+            document.querySelector('.mobile-menu-btn').classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
