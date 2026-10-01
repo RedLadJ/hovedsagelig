@@ -401,3 +401,22 @@ html, body {
         grid-template-columns: 1fr; /* Stabler før og efter hvis skærmen er meget smal */
     }
 }
+/* Styling til links i bunden */
+.footer-links {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #544e48;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #bba06b;
+}
