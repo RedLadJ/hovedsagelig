@@ -364,8 +364,10 @@ html, body {
     width: 100%;
     padding: 40px 0;
     text-align: center;
-    background-color: transparent; 
     margin-top: auto; 
+    
+    /* Gør baggrunden en anelse mørkere under stregen */
+    background-color: rgba(84, 78, 72, 0.04); 
     
     /* Den diskrete lysebrune streg med en blød skygge-effekt under sig */
     border-top: 1px solid rgba(84, 78, 72, 0.25); 
