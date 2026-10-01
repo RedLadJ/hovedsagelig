@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handelsbetingelser | Hovedsagelig</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo-link">
+                <img src="logo-hvid.png" alt="Hovedsagelig" class="nav-logo-img">
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Forside</a></li>
+                <li><a href="om-os">Om os</a></li>
+                <li><a href="galleri">Galleri</a></li>
+                <li><a href="priser">Priser</a></li>
+                <li><a href="faq">FAQ</a></li>
+                <li><a href="kontakt" class="nav-btn">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page-section">
+        <div class="linktree-card" style="text-align: left; max-width: 650px;">
+            <h2 class="page-title" style="text-align: center; margin-bottom: 20px;">Handelsbetingelser</h2>
+            
+            <p class="hero-desc" style="font-size: 0.95rem; margin-bottom: 20px;">
+                <strong>1. Generelle oplysninger</strong><br>
+                Disse betingelser gælder for alle behandlinger, forløb og konsultationer booket hos Hovedsagelig, CVR: [Dit CVR], [Din adresse].
+            </p>
+
+            <p class="hero-desc" style="font-size: 0.95rem; margin-bottom: 20px;">
+                <strong>2. Afbudspolitik (Vigtigt)</strong><br>
+                Afbud eller ændring af din tid skal ske senest 24 timer før din aftalte behandling. Ved for sent afbud eller udeblivelse forbeholder vi os retten til at opkræve et gebyr svarende til [50% / 100%] af behandlingens pris.
+            </p>
+
+            <p class="hero-desc" style="font-size: 0.95rem; margin-bottom: 20px;">
+                <strong>3. Betaling</strong><br>
+                Betaling sker umiddelbart efter hver endt behandling eller efter forudgående aftale om forløbsbetaling. Vi modtager [MobilePay / Kontant / Bankoverførsel].
+            </p>
+
+            <p class="hero-desc" style="font-size: 0.95rem; margin-bottom: 20px;">
+                <strong>4. Behandlingens varighed og forløb</strong><br>
+                SMP og density-behandlinger kræver typisk flere sessioner. Resultatet afhænger af hudtype og individuel heling, og vi rådgiver grundigt om efterbehandling, som klienten selv har ansvaret for at følge.
+            </p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 hovedsagelig. Alle rettigheder forbeholdes.</p>
+            <p class="footer-cvr">CVR-nr: [Dit CVR-nummer]</p>
+            <div class="footer-links">
+                <a href="handelsbetingelser">Handelsbetingelser</a>
+                <a href="privatlivspolitik">Privatlivspolitik</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+            document.querySelector('.mobile-menu-btn').classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

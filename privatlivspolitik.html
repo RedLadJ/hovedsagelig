@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privatlivspolitik | Hovedsagelig</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo-link">
+                <img src="logo-hvid.png" alt="Hovedsagelig" class="nav-logo-img">
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Forside</a></li>
+                <li><a href="om-os">Om os</a></li>
+                <li><a href="galleri">Galleri</a></li>
+                <li><a href="priser">Priser</a></li>
+                <li><a href="faq">FAQ</a></li>
+                <li><a href="kontakt" class="nav-btn">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page-section">
+        <div class="linktree-card" style="text-align: left; max-width: 650px;">
+            <h2 class="page-title" style="text-align: center; margin-bottom: 20px;">Privatlivspolitik (GDPR)</h2>
+            
+            <p class="hero-desc" style="font-size: 0.95rem; margin-bottom: 20px;">
+                <strong>1. Dataansvarlig</strong><br>
+                Hovedsagelig er dataansvarlig for behandlingen af de personoplysninger, som vi modtager fra dig via vores kontaktformular på hjemmesiden.
+            </p>
+
+            <p class="hero-desc" style="font-size: 0.95rem; margin-bottom: 20px;">
+                <strong>2. Formål og oplysninger</strong><br>
+                Når du udfylder vores kontaktformular, indsamler vi dit navn, din e-mailadresse og evt. dit telefonnummer. Formålet er udelukkende at kunne besvare din henvendelse og tilbyde dig rådgivning om vores behandlinger.
+            </p>
+
+            <p class="hero-desc" style="font-size: 0.95rem; margin-bottom: 20px;">
+                <strong>3. Opbevaring og sletning</strong><br>
+                Vi passer godt på dine data og deler dem aldrig med tredjeparter. Oplysningerne gemmes kun så længe, det er nødvendigt for at varetage dialogen med dig, hvorefter de slettes permanent.
+            </p>
+
+            <p class="hero-desc" style="font-size: 0.95rem; margin-bottom: 20px;">
+                <strong>4. Dine rettigheder</strong><br>
+                Du har til enhver tid ret til at få oplyst, hvilke data vi har registreret om dig, og du kan altid bede os om at rette eller slette dine oplysninger med øjeblikkelig virkning ved at kontakte os på kontakt@hovedsagelig.dk.
+            </p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 hovedsagelig. Alle rettigheder forbeholdes.</p>
+            <p class="footer-cvr">CVR-nr: [Dit CVR-nummer]</p>
+            <div class="footer-links">
+                <a href="handelsbetingelser">Handelsbetingelser</a>
+                <a href="privatlivspolitik">Privatlivspolitik</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+            document.querySelector('.mobile-menu-btn').classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
