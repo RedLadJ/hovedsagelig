@@ -387,3 +387,17 @@ html, body {
     font-size: 0.8rem;
     margin-top: 4px;
 }
+/* Nyt under-grid til Før & Efter parrene */
+.sub-gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* Mobil-tilpasning til Før/Efter-billederne */
+@media (max-width: 480px) {
+    .sub-gallery-grid {
+        grid-template-columns: 1fr; /* Stabler før og efter hvis skærmen er meget smal */
+    }
+}
