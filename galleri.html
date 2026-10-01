@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galleri | Hovedsagelig</title>
-    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
-    <link class="font-link" rel="preconnect" href="https://googleapis.com">
-    <link class="font-link" rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navigation med mobilknap -->
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="/" class="logo-link">
@@ -34,24 +33,36 @@
         </div>
     </nav>
 
+    <!-- Galleri med 2x2 bokse opdelt i Før og Efter -->
     <main class="page-section">
-        <div class="linktree-card" style="max-width: 700px;">
+        <div class="linktree-card" style="max-width: 750px;">
             <h2 class="page-title">Før & Efter Resultater</h2>
             <p class="hero-desc" style="margin-bottom: 30px;">Et indblik i vores arbejde med scalp micropigmentation og density work.</p>
+            
             <div class="gallery-grid">
+                
+                <!-- SEKTION 1: SMP BEHANDLING -->
                 <div class="gallery-item">
-                    <div class="image-placeholder">[ Billede kommer ]</div>
+                    <div class="sub-gallery-grid">
+                        <div class="image-placeholder">Før</div>
+                        <div class="image-placeholder">Efter</div>
+                    </div>
                     <div class="contrast-oval" style="cursor: default; text-align: center; margin-bottom: 0;">SMP Behandling</div>
                 </div>
+
+                <!-- SEKTION 2: DENSITY WORK -->
                 <div class="gallery-item">
-                    <div class="image-placeholder">[ Billede kommer ]</div>
+                    <div class="sub-gallery-grid">
+                        <div class="image-placeholder">Før</div>
+                        <div class="image-placeholder">Efter</div>
+                    </div>
                     <div class="contrast-oval" style="cursor: default; text-align: center; margin-bottom: 0;">Density Work</div>
                 </div>
+
             </div>
         </div>
     </main>
 
-    <!-- Kontakten der tænder for menuen -->
     <script>
         function toggleMenu() {
             document.getElementById('navLinks').classList.toggle('active');
@@ -59,11 +70,5 @@
         }
     </script>
 
-        <footer class="site-footer">
-        <div class="footer-container">
-            <p>&copy; 2026 hovedsagelig. Alle rettigheder forbeholdes.</p>
-            <p class="footer-cvr">CVR-nr: [123456789]</p>
-        </div>
-    </footer>
 </body>
 </html>
